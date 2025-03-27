@@ -1,0 +1,7 @@
+@mixin shared-style($bg-color, $padding, $border, $font-size, $font-family) {
+    background: $bg-color;
+    padding: $padding;
+    border: $border;
+    font-size: $font-size;
+    font-family: $font-family;
+}
