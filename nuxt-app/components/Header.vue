@@ -2,7 +2,7 @@
     <header class = "header">
         <div class="header__container _container">
             <div class="header__block-one">
-                <img class="header__logo" src="\img\image.svg" alt="Логотип">
+                <img class="header__logo" src="\img\header_logo.svg" alt="Логотип">
                 <nav class="header__menu">
                     <a href="#" class="header__menu-item">Реализованные проекты</a>
                     <a href="#" class="header__menu-item">Новости</a>

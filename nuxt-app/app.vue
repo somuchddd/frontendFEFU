@@ -1,6 +1,8 @@
 <template>
   <div class="wrapper">
     <Header />
+    <Main />
+    <Footer />
   </div>
 </template>
 
