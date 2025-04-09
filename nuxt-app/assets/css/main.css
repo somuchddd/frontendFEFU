@@ -6,10 +6,23 @@
       --font: 'Montserrat', sans-serif;
 }
 
-.appVue{
-      display: grid;
-      font-size: 24px;
+html, body {
+      width: 100%;
       min-height: 100vh;
-      grid-template-rows: auto 1fr auto;
-      font-family: var(--font);
 }
+    
+._container {
+      width: 100%;
+      max-width: 1300px;
+      margin: 0 auto;
+}
+
+a{
+      all: unset;
+}
+
+.wrapper{
+      display: flex;
+      flex-direction: column;
+}
+

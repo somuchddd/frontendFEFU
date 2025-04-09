@@ -1,11 +1,10 @@
 <template>
-  <div class="appVue">
+  <div class="wrapper">
     <Header />
-    <MainBlock />
-    <Footer />
   </div>
 </template>
 
 <style>
 @import "@/assets/css/main.css";
+@import "reset-css";
 </style>
