@@ -53,6 +53,7 @@
         flex-direction: row;
         color: #ffffff;
         align-items: flex-start;
+        flex-wrap: wrap;
     }
 
     .footer__nav{
@@ -61,9 +62,10 @@
         font-family: var(--main-font);
         gap: 24px;
         font-size: 16px;
-        margin-right: 122px;
-        margin-left: 154px;
+        margin-right: clamp(20px, 6vw, 122px);
+        margin-left: clamp(20px, 8vw, 154px);
         padding-top: 12px;
+        align-items: flex-start;
     }
 
     .footer__contacts{
@@ -74,6 +76,7 @@
         font-size: 14px;
         font-weight: 400;
         padding-top: 11px;
+        margin-right: 45px;
     }
 
     .footer__contacts div{
@@ -92,6 +95,10 @@
         font-family: var(--font);
         cursor: pointer;
         margin-left: auto;
+        @media (max-width: 1032px){
+            margin-left: 0px;
+            margin-top: 20px;
+        }
     }
 
     .footer__rights{
@@ -99,17 +106,54 @@
         font-size: 14px;
         opacity: 0.6;
         color: #ffffff;
+        align-items: flex-start;
     }
 
     .footer__rights-item, .footer__contacts a, .footer__nav a{
         cursor: pointer;
     }
     
-    .footer__rights-item:nth-child(1){
-        margin-right: 215px;
+    .footer__rights-item:nth-child(1) {
+        margin-right: clamp(20px, 11vw, 215px);
     }
 
-    .footer__rights-item:nth-child(2){
-        margin-right: 99px;
+    .footer__rights-item:nth-child(2) {
+        margin-right: clamp(15px, 5vw, 99px);
+    }
+    
+    @media (max-width: 824px){
+        .footer__content{
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .footer__container{
+            gap: 40px;
+        }
+
+        .footer__nav{
+            margin-right: 0;
+            margin-left: 0;
+            padding-top: 0px;
+        }
+
+        .footer__rights{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .footer__button{
+            margin-top: 0px;
+        }
+
+        .footer__contacts{
+            margin-right: 0;
+            padding-top: 0;
+        }
+
+        .footer__rights-item:nth-child(1), .footer__rights-item:nth-child(2){
+            margin-right: 0px;
+        }
     }
 </style>

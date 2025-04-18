@@ -14,11 +14,18 @@
                     <img class="header__phone-icon" src="\img\telephone.svg" alt="Телефон">
                     <a href="tel:+79009009090" class="header__phone-number">+7 (900) 900-90-90</a>
                 </div>
-                <button class="header__button">Оставить заявку</button>
+                <button class="header__button">
+                    <span class="header__button-text">Оставить заявку</span>
+                </button>
+                <Drawer class="header__button-burger"/>
             </div>
         </div>
     </header>
 </template>
+
+<script setup>
+    import Drawer from "./Drawer.vue"
+</script>
 
 <style scoped lang="scss">
     .header{
@@ -42,7 +49,8 @@
         display: flex;
         gap: 24px;
         font-size: 16px;
-        color: #666666
+        color: #666666;
+        flex-wrap: wrap;
     }
 
     .header__menu-item{
@@ -75,6 +83,9 @@
         gap: 8px;
         font-size: 14px;
         line-height: 120%;
+        @media (max-width: 520px){
+            display: none;
+        }
     }
 
     .header__phone-number{
@@ -86,4 +97,20 @@
         width: 16px;
     }
     
+    @media (max-width: 955px){
+        .header__menu{
+            display: none;
+        }
+    }
+
+    @media (max-width: 824px){
+        .header__button-burger{
+            display: block;
+        }
+
+        .header__button{
+            display: none;
+        }
+    }
+
 </style>
