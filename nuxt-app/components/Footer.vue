@@ -46,6 +46,7 @@
         display: flex;
         flex-direction: column;
         gap: 32px;
+        
     }
 
     .footer__content{
