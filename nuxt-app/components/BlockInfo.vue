@@ -1,5 +1,5 @@
 <template>
-    <section class="block__info">
+    <div class="block__info">
         <div class="block__info-title">Каждый проект для нас - важный</div>
         <div class="block__info-text">
             <span>Мы строительная компания полного цикла.</span>
@@ -19,7 +19,7 @@
             <div class="card__info-title">14 лет</div>
             <div class="card__info-subtitle">мы на рынке загородного строительства</div>
         </div>
-    </section>
+    </div>
 </template>
 
 <style scoped lang="scss">

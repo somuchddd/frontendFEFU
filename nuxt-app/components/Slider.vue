@@ -1,22 +1,22 @@
 <template>
     <Swiper :modules="modules"
     navigation pagination :loop="true">
-      <SwiperSlide v-for="slide in slides">
-        <figure class="slider__figure">
-          <picture class="slider__figure-picture">
-            <source
-              :srcset="`${slide.image_landscape.x2} 2x, ${slide.image_landscape.x1}`"
-              media="(min-width: 768px)"
-            >
-            <source :srcset="`${slide.image_portrait.x2} 2x`">
-            <img :src="slide.image_portrait.x1" >
-          </picture>
-          <figcaption class="slider__figure-caption">
-            <p class="caption__title">{{ slide.title }}</p>
-            <p class="caption__text">{{ slide.text }}</p>
-          </figcaption>
-        </figure>
-      </SwiperSlide>
+        <SwiperSlide v-for="slide in slides">
+            <figure class="slider__figure">
+                <picture class="slider__figure-picture">
+                    <source
+                    :srcset="`${slide.image_landscape.x2} 2x, ${slide.image_landscape.x1}`"
+                    media="(min-width: 768px)"
+                    >
+                    <source :srcset="`${slide.image_portrait.x2} 2x`">
+                    <img :src="slide.image_portrait.x1" >
+                </picture>
+                <figcaption class="slider__figure-caption">
+                    <p class="caption__title">{{ slide.title }}</p>
+                    <p class="caption__text">{{ slide.text }}</p>
+                </figcaption>
+            </figure>
+        </SwiperSlide>
     </Swiper>
 </template>
 
