@@ -24,12 +24,18 @@
                         <address>г. Владивосток <br> ул. Выселковая 49, стр. 3</address>
                     </div>
                 </div>
-                <button class="footer__button">Оставить заявку</button>
-            </div>
-            <div class="footer__rights">
-                <a class="footer__rights-item" href="#">© Загдом, 2021</a>
-                <a class="footer__rights-item" href="#">Политика конфиденциальности</a>
-                <a class="footer__rights-item" href="#">Пользовательское соглашение</a>
+                <div class="footer__button-container">
+                    <button class="footer__button">Оставить заявку</button>
+                </div>
+                <div class="footer__rights-item">
+                    <a class="footer__rights-link" href="#">© Загдом, 2021</a>
+                </div>
+                <div class="footer__rights-item">
+                    <a class="footer__rights-link" href="#">Политика конфиденциальности</a>
+                </div>
+                <div class="footer__rights-item">
+                    <a class="footer__rights-link" href="#">Пользовательское соглашение</a>
+                </div>
             </div>
         </div>
     </footer>
@@ -42,19 +48,14 @@
         padding-top: 37px;
     }
 
-    .footer__container{
-        display: flex;
-        flex-direction: column;
-        gap: 32px;
-        
-    }
-
     .footer__content{
-        display: flex;
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: "logo nav contacts button"
+                             "rights rights rights rights";
+        row-gap: 32px;
+        column-gap: 24px;
         color: #ffffff;
-        align-items: flex-start;
-        flex-wrap: wrap;
     }
 
     .footer__nav{
@@ -63,9 +64,6 @@
         font-family: var(--main-font);
         gap: 24px;
         font-size: 16px;
-        margin-right: clamp(20px, 6vw, 122px);
-        margin-left: clamp(20px, 8vw, 154px);
-        padding-top: 12px;
         align-items: flex-start;
     }
 
@@ -76,14 +74,18 @@
         gap: 24px;
         font-size: 14px;
         font-weight: 400;
-        padding-top: 11px;
-        margin-right: 45px;
     }
 
     .footer__contacts div{
         display: flex;
         line-height: 120%;
         gap: 8px;
+        align-items: flex-start;
+    }
+
+    .footer__button-container {
+        display: flex;
+        justify-content: flex-end; /* Выравнивание по правому краю */
         align-items: flex-start;
     }
 
@@ -95,14 +97,9 @@
         border: 0px;
         font-family: var(--font);
         cursor: pointer;
-        margin-left: auto;
-        @media (max-width: 1032px){
-            margin-left: 0px;
-            margin-top: 20px;
-        }
     }
 
-    .footer__rights{
+    .footer__rights-item{
         font-family: var(--main-font);
         font-size: 14px;
         opacity: 0.6;
@@ -110,51 +107,27 @@
         align-items: flex-start;
     }
 
-    .footer__rights-item, .footer__contacts a, .footer__nav a{
+    .footer__rights-link, .footer__contacts a, .footer__nav a{
         cursor: pointer;
-    }
-    
-    .footer__rights-item:nth-child(1) {
-        margin-right: clamp(20px, 11vw, 215px);
-    }
-
-    .footer__rights-item:nth-child(2) {
-        margin-right: clamp(15px, 5vw, 99px);
     }
     
     @media (max-width: 824px){
         .footer__content{
-            flex-direction: column;
-            gap: 40px;
+            grid-template-columns: 1fr;
+            grid-template-areas: "logo"
+                                 "nav"
+                                 "contacts"
+                                 "button"
+                                 "rights";
+                             
         }
 
         .footer__container{
             gap: 40px;
         }
 
-        .footer__nav{
-            margin-right: 0;
-            margin-left: 0;
-            padding-top: 0px;
-        }
-
-        .footer__rights{
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        .footer__button{
-            margin-top: 0px;
-        }
-
-        .footer__contacts{
-            margin-right: 0;
-            padding-top: 0;
-        }
-
-        .footer__rights-item:nth-child(1), .footer__rights-item:nth-child(2){
-            margin-right: 0px;
+        .footer__button-container {
+            justify-content: start; 
         }
     }
 </style>
