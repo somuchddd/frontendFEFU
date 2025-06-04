@@ -9,6 +9,6 @@ export default defineNuxtConfig({
         'Montserrat': true,
       }
     }],
-    "nuxt-swiper"
+    "nuxt-swiper",
   ]
 })

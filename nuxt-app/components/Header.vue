@@ -24,7 +24,7 @@
 </template>
 
 <script setup>
-    import Drawer from "./Drawer.vue"
+    import Drawer from './Drawer.vue'
 </script>
 
 <style scoped lang="scss">

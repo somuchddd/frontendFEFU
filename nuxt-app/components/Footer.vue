@@ -85,7 +85,7 @@
 
     .footer__button-container {
         display: flex;
-        justify-content: flex-end; /* Выравнивание по правому краю */
+        justify-content: flex-end;
         align-items: flex-start;
     }
 

@@ -8,8 +8,8 @@
                     :srcset="`${slide.image_landscape.x2} 2x, ${slide.image_landscape.x1}`"
                     media="(min-width: 768px)"
                     >
-                    <source :srcset="`${slide.image_portrait.x2} 2x`">
-                    <img :src="slide.image_portrait.x1" >
+                    <source :srcset="`${slide.image_portrait.x2} 2x, ${slide.image_portrait.x1}`">
+                    <img :src="slide.image_portrait.x1" :alt='slide.title'>
                 </picture>
                 <figcaption class="slider__figure-caption">
                     <p class="caption__title">{{ slide.title }}</p>

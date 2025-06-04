@@ -1,14 +1,14 @@
 <template>
     <div class='project__card'>
-       <picture class="project__card-picture">
+        <picture class="project__card-picture">
             <source
             :srcset="`${image_landscape.x2} 2x, ${image_landscape.x1}`"
             media="(min-width: 1189px)"
             >
-            <source :srcset="`${image_portrait.x2} 2x`">
-            <img :src="image_portrait.x1" >
+            <source :srcset="`${image_portrait.x2} 2x, ${image_portrait.x1}`">
+            <img :src="image_portrait.x1" :alt="title">
        </picture>
-       <div class="project__card-info">
+        <div class="project__card-info">
             <p class="project__card-title">{{title}}</p>
             <p class="project__card-text" v-html='text' />
        </div>
