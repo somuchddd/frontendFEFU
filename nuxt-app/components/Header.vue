@@ -14,7 +14,8 @@
                     <img class="header__phone-icon" src="\img\telephone.svg" alt="Телефон">
                     <a href="tel:+79009009090" class="header__phone-number">+7 (900) 900-90-90</a>
                 </div>
-                <button class="header__button">
+                <Dialog v-model:open="dialogOpened" />
+                <button class="header__button" @click='dialogOpened = true'>
                     <span class="header__button-text">Оставить заявку</span>
                 </button>
                 <Drawer class="header__button-burger"/>
@@ -25,6 +26,7 @@
 
 <script setup>
     import Drawer from './Drawer.vue'
+    const dialogOpened = ref(false)
 </script>
 
 <style scoped lang="scss">

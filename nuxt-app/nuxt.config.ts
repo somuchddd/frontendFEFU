@@ -10,5 +10,7 @@ export default defineNuxtConfig({
       }
     }],
     "nuxt-swiper",
-  ]
+    'reka-ui/nuxt',
+  ],
+  css: ['~/assets/css/dialog.css'],
 })

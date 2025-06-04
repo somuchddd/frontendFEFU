@@ -25,7 +25,8 @@
                     </div>
                 </div>
                 <div class="footer__button-container">
-                    <button class="footer__button">Оставить заявку</button>
+                    <Dialog v-model:open="dialogOpened" />
+                    <button class="footer__button" @click='dialogOpened = true'>Оставить заявку</button>
                 </div>
                 <div class="footer__rights-item">
                     <a class="footer__rights-link" href="#">© Загдом, 2021</a>
@@ -131,3 +132,7 @@
         }
     }
 </style>
+
+<script setup>
+    const dialogOpened = ref(false)
+</script>
