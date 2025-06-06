@@ -7,8 +7,8 @@
                 </div>
                 <nav class="footer__nav">
                     <a href="#" class="footer__nav-item">Реализованные проекты</a>
-                    <a href="#" class="footer__nav-item">Новости</a>
-                    <a href="#" class="footer__nav-item">Контакты</a>
+                    <NuxtLink to='/news' class="footer__nav-item">Новости</NuxtLink>
+                    <NuxtLink to='/contacts' class="footer__nav-item">Контакты</NuxtLink>
                 </nav>
                 <div class="footer__contacts">
                     <div class="footer__phone">
@@ -28,13 +28,13 @@
                     <Dialog v-model:open="dialogOpened" />
                     <button class="footer__button" @click='dialogOpened = true'>Оставить заявку</button>
                 </div>
-                <div class="footer__rights-item">
+                <div class="footer__rights-item1">
                     <a class="footer__rights-link" href="#">© Загдом, 2021</a>
                 </div>
-                <div class="footer__rights-item">
+                <div class="footer__rights-item2">
                     <a class="footer__rights-link" href="#">Политика конфиденциальности</a>
                 </div>
-                <div class="footer__rights-item">
+                <div class="footer__rights-item3">
                     <a class="footer__rights-link" href="#">Пользовательское соглашение</a>
                 </div>
             </div>
@@ -49,11 +49,15 @@
         padding-top: 37px;
     }
 
+    .footer__logo{
+        grid-area: logo;
+    }
+
     .footer__content{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-areas: "logo nav contacts button"
-                             "rights rights rights rights";
+                             "rights_first rights_second rights_third .";
         row-gap: 32px;
         column-gap: 24px;
         color: #ffffff;
@@ -66,6 +70,7 @@
         gap: 24px;
         font-size: 16px;
         align-items: flex-start;
+        grid-area: nav;
     }
 
     .footer__contacts{
@@ -75,6 +80,7 @@
         gap: 24px;
         font-size: 14px;
         font-weight: 400;
+        grid-area: contacts;
     }
 
     .footer__contacts div{
@@ -88,6 +94,7 @@
         display: flex;
         justify-content: flex-end;
         align-items: flex-start;
+        grid-area: button;
     }
 
     .footer__button{
@@ -98,14 +105,27 @@
         border: 0px;
         font-family: var(--font);
         cursor: pointer;
+        text-align: center;
     }
 
-    .footer__rights-item{
+    .footer__rights-item1, .footer__rights-item2, .footer__rights-item3{
         font-family: var(--main-font);
         font-size: 14px;
         opacity: 0.6;
         color: #ffffff;
         align-items: flex-start;
+    }
+
+    .footer__rights-item1{
+        grid-area: rights_first;
+    }
+
+    .footer__rights-item2{
+        grid-area: rights_second;
+    }
+
+    .footer__rights-item3{
+        grid-area: rights_third;
     }
 
     .footer__rights-link, .footer__contacts a, .footer__nav a{
@@ -119,7 +139,9 @@
                                  "nav"
                                  "contacts"
                                  "button"
-                                 "rights";
+                                 "rights_first "
+                                 "rights_second"
+                                 "rights_third";
                              
         }
 

@@ -13,8 +13,8 @@
             <div v-show="isOpen" class="drawer__menu">
                 <nav class="drawer__nav">
                     <a href="#" class="drawer__item" @click="closeMenu">Реализованные проекты</a>
-                    <a href="#" class="drawer__item" @click="closeMenu">Новости</a>
-                    <a href="#" class="drawer__item" @click="closeMenu">Контакты</a>
+                    <NuxtLink to='/news' class="drawer__item" @click="closeMenu">Новости</NuxtLink>
+                    <NuxtLink to='/contacts' class="drawer__item" @click="closeMenu">Контакты</NuxtLink>
                 </nav>
                 <div class="drawer__contacts">
                     <div class="drawer__phone">

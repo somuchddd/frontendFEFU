@@ -49,6 +49,5 @@ const emit = defineEmits(['update:open', 'close'])
       </DialogContent>
     </DialogPortal>
   </DialogRoot>
-
 </template>
 

@@ -5,8 +5,8 @@
                 <img class="header__logo" src="\img\header_logo.svg" alt="Логотип">
                 <nav class="header__menu">
                     <a href="#" class="header__menu-item">Реализованные проекты</a>
-                    <a href="#" class="header__menu-item">Новости</a>
-                    <a href="#" class="header__menu-item">Контакты</a>
+                    <NuxtLink to='/news' class="header__menu-item" active-class="header__menu-item-active">Новости</NuxtLink>
+                    <NuxtLink to='/contacts' class="header__menu-item" active-class="header__menu-item-active">Контакты</NuxtLink>
                 </nav>
             </div>
             <div class="header__block-two">
@@ -57,6 +57,9 @@
 
     .header__menu-item{
         cursor: pointer;
+        &-active{
+            color: #029F59;
+        }
     }
 
     .header__block-two{
@@ -77,6 +80,7 @@
         border: 0px;
         font-family: inherit;
         cursor: pointer;
+        text-align: center;
     }
 
     .header__phone{

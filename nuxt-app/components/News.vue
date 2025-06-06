@@ -9,7 +9,8 @@
             </button>
         </div>
         <div class="news__cards">
-            <NewsCard v-for="card in news" 
+            <NewsCard v-for="card in newsData"
+            :key="card.id" 
             :title='card.title'
             :text='card.text'
             :image='card.image'
@@ -61,52 +62,6 @@
 </style>
 
 <script setup>
-    import NewsCard from './NewsCard.vue'
-    import news1_1x from '../img/news1.jpg'
-    import news1_2x from '../img/news1@2x.jpg'
-    import news2_1x from '../img/news2.jpg'
-    import news2_2x from '../img/news2@2x.jpg'
-    import news3_1x from '../img/news3.jpg'
-    import news3_2x from '../img/news3@2x.jpg'
-    import news4_1x from '../img/news4.jpg'
-    import news4_2x from '../img/news4@2x.jpg'
-
-    const news = [
-        {
-            image:{
-                x1: news1_1x,
-                x2: news1_2x,
-            },
-            date: '20 авг 2021',
-            title: 'Как сделать строительство дешевле?',
-            text: 'Строительство дома можно сделать дешевле — выбрав проект...'
-        },
-        {
-            image:{
-                x1: news2_1x,
-                x2: news2_2x,
-            },
-            date: '20 авг 2021',
-            title: 'Почему Гуд Вилл строит лучшие дома?',
-            text: 'Хотим обрадовать тех, кто планирует переезд из квартиры в дом...'
-        },
-        {
-            image:{
-                x1: news3_1x,
-                x2: news3_2x,
-            },
-            date: '20 авг 2021',
-            title: 'Преимущества и недостатки частного дома',
-            text: 'Первое и главное: строим дом индивидуально для вас, по вашим...'
-        },
-        {
-            image:{
-                x1: news4_1x,
-                x2: news4_2x,
-            },
-            date: '20 авг 2021',
-            title: 'Из чего мы строим дома в ипотеку?',
-            text: 'Самый популярный вопрос наших клиентов касается материалов, которы...'
-        },
-    ]
+    import { newsData } from '~/assets/mock.js'
+    import NewsCard from './NewsCard.vue';
 </script>

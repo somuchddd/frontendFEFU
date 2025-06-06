@@ -1,12 +1,14 @@
 <template>
   <div class="wrapper">
     <Header />
-    <Main />
+    <NuxtPage class="page"/>
     <Footer />
   </div>
 </template>
 
 <style>
-@import "@/assets/css/main.css";
 @import "reset-css";
+.page{
+  flex: 1;
+}
 </style>

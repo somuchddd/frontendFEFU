@@ -25,23 +25,14 @@
     </main>
 </template>
 
-<script>
-    import BlockInfo from './BlockInfo.vue'
-    import Slider from './Slider.vue'
-    import Projects from './Projects.vue'
-    import News from './News.vue'
+<script setup>
+    import BlockInfo from '../components/BlockInfo.vue'
+    import Slider from '../components/Slider.vue'
+    import Projects from '../components/Projects.vue'
+    import News from '../components/News.vue'
 </script>
 
 <style>
-    .main{
-        flex: 1 1 auto;
-    }
-
-    .main__container{
-        display: flex;
-        flex-direction: column;
-    }
-
     .projects{
         background-color: #F5F7F3;
     }

@@ -12,5 +12,5 @@ export default defineNuxtConfig({
     "nuxt-swiper",
     'reka-ui/nuxt',
   ],
-  css: ['~/assets/css/dialog.css'],
+  css: ['~/assets/css/dialog.css', '~/assets/css/main.css', , '~/assets/css/pagination.css'],
 })

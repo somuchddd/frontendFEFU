@@ -4,7 +4,7 @@
             <source
             :srcset="`${image.x2} 2x, ${image.x1}`"
             >
-            <img :src="image.x1" >
+            <img :src="image.x1" :alt="title">
         </picture>
         <div class="news__card-info">
             <p class="news__card-date">{{date}}</p>
