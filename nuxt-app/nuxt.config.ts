@@ -11,6 +11,10 @@ export default defineNuxtConfig({
     }],
     "nuxt-swiper",
     'reka-ui/nuxt',
+    'vue-yandex-maps/nuxt',
   ],
   css: ['~/assets/css/dialog.css', '~/assets/css/main.css', , '~/assets/css/pagination.css'],
+  yandexMaps: {
+      apikey: process.env.YANDEX_MAPS_API_KEY,
+   }
 })

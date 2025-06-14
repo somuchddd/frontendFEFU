@@ -12,7 +12,7 @@
             <div class="header__block-two">
                 <div class="header__phone">
                     <img class="header__phone-icon" src="\img\telephone.svg" alt="Телефон">
-                    <a href="tel:+79009009090" class="header__phone-number">+7 (900) 900-90-90</a>
+                    <a :href="`tel:${phone.value}`" class="header__phone-number">{{ phone.label }}</a>
                 </div>
                 <Dialog v-model:open="dialogOpened" />
                 <button class="header__button" @click='dialogOpened = true'>
@@ -26,6 +26,8 @@
 
 <script setup>
     import Drawer from './Drawer.vue'
+    import {mockContacts} from '~/assets/contacts.js'
+    const { phone, email, address} = mockContacts
     const dialogOpened = ref(false)
 </script>
 

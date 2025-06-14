@@ -10,20 +10,7 @@
                     <NuxtLink to='/news' class="footer__nav-item">Новости</NuxtLink>
                     <NuxtLink to='/contacts' class="footer__nav-item">Контакты</NuxtLink>
                 </nav>
-                <div class="footer__contacts">
-                    <div class="footer__phone">
-                        <img class="footer__phone-icon" src="\img\telephone.svg" alt="Телефон">
-                        <a href="tel:+79009009090" class="footer__phone-number">+7 (900) 900-90-90</a>
-                    </div>
-                    <div class="footer__email">
-                        <img class="footer__email-icon" src="\img\email.svg" alt="Почта">
-                        <a href="mailto:info@gmail.com">info@gmail.com</a>
-                    </div>
-                    <div class="footer__address">
-                        <img class="footer__address-icon" src="\img\address.svg" alt="Адрес">
-                        <address>г. Владивосток <br> ул. Выселковая 49, стр. 3</address>
-                    </div>
-                </div>
+                <Contacts class="footer__contacts"/>
                 <div class="footer__button-container">
                     <Dialog v-model:open="dialogOpened" />
                     <button class="footer__button" @click='dialogOpened = true'>Оставить заявку</button>
@@ -47,7 +34,9 @@
         background-color: #254741;
         padding-bottom: 33px;
         padding-top: 37px;
+        color: #ffffff;
     }
+    
 
     .footer__logo{
         grid-area: logo;
@@ -60,7 +49,6 @@
                              "rights_first rights_second rights_third .";
         row-gap: 32px;
         column-gap: 24px;
-        color: #ffffff;
     }
 
     .footer__nav{
@@ -74,20 +62,7 @@
     }
 
     .footer__contacts{
-        display: flex;
-        flex-direction: column;
-        font-family: var(--font);
-        gap: 24px;
-        font-size: 14px;
-        font-weight: 400;
         grid-area: contacts;
-    }
-
-    .footer__contacts div{
-        display: flex;
-        line-height: 120%;
-        gap: 8px;
-        align-items: flex-start;
     }
 
     .footer__button-container {
@@ -99,7 +74,6 @@
 
     .footer__button{
         background-color: #029F59;
-        color: #ffffff;
         border-radius: 10px;
         padding: 16px 40px;
         border: 0px;
@@ -112,7 +86,6 @@
         font-family: var(--main-font);
         font-size: 14px;
         opacity: 0.6;
-        color: #ffffff;
         align-items: flex-start;
     }
 
@@ -157,4 +130,7 @@
 
 <script setup>
     const dialogOpened = ref(false)
+    import {mockContacts} from '~/assets/contacts.js'
+    const { phone, email, address} = mockContacts
+    import Contacts from './Contacts.vue'
 </script>
