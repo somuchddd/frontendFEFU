@@ -12,7 +12,7 @@ import {
 const props = defineProps({
   open: Boolean
 })
-
+import Form from "~/components/Form.vue"
 const emit = defineEmits(['update:open', 'close'])
 </script>
 
@@ -22,24 +22,13 @@ const emit = defineEmits(['update:open', 'close'])
     <DialogPortal>
       <DialogOverlay class="DialogOverlay"/>
       <DialogContent class="DialogContent">
-        <DialogTitle class="DialogTitle">Edit profile</DialogTitle>
+        <DialogTitle class="DialogTitle">    </DialogTitle>
         <DialogDescription class="DialogDescription">
-          Make changes to your profile here. Click save when you're done.
+          
         </DialogDescription>
-
-        <fieldset class="Fieldset">
-          <label class="Label" for="name">Name</label>
-          <input id="name" class="Input" defaultValue="Pedro Duarte">
-        </fieldset>
-
-        <fieldset class="Fieldset">
-          <label class="Label" for="username">Username</label>
-          <input id="username" class="Input" defaultValue="@peduarte">
-        </fieldset>
-
+        <Form />
         <div class="mt-[25px] flex justify-end">
           <DialogClose as-child >
-            <button class="Button green" @click="emit('update:open', false)">Save changes</button>
           </DialogClose>
         </div>
 
