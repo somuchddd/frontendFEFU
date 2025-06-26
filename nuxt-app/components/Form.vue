@@ -6,7 +6,7 @@
                 <input type="text" name="name" id="name" placeholder="Имя" required>
             </div>
             <div class="form__block">
-                <input v-maska:raw.unmasked data-maska="+7-(###)-###-##-##" v-model="masked" placeholder="Телефон">
+                <input name="tel" v-maska:raw.unmasked data-maska="+7-(###)-###-##-##" v-model="masked" placeholder="Телефон" required>
             </div>
             <div class="form__block">
                 <textarea name="message" id="message" rows="5" cols="33" placeholder="Сообщение"></textarea>
